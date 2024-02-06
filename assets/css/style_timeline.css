@@ -1,0 +1,95 @@
+body {
+  background-color: whitesmoke;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: #007bff;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #007bff;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 100%;
+  background: #f8f9fa;
+  z-index: -1;
+}
+
+.timeline-content {
+  position: relative;
+  padding: 20px;
+  background: rgb(243, 220, 212);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.timeline-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-body {
+  font-size: 16px;
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  font-size: 24px;
+  color: #007bff;
+}
+
+.test-button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #28a745; /* Green button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.test-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

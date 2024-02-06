@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Platform</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets\css\style_practice.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h2 class="mb-4">Fizz Buzz</h2>
+
+    <div class="form-group">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere hic error perferendis in veritatis debitis omnis sit beatae repellendus, exercitationem delectus tempore quos eaque sapiente ipsam consequuntur velit sint itaque.
+    </div>
+    <br>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-2">
+          <select class="form-select language-selector" aria-label="Select Language">
+            <option selected>Select Language</option>
+            <option value="cpp">C++</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+          </select>
+        </div>
+        <!-- Other content can be added here in additional columns -->
+      </div>
+      <div class="row">
+        <div class="container col-8">
+          Code <br><br>
+          <textarea class="form-control coding-area col-3" id="codingArea" rows="10" placeholder="Write your code here"></textarea>
+        </div>
+        <div class="container col-4" id="testResults">
+          Your Test Results <br><br>
+          <!-- Give the textarea an ID for easier manipulation with JavaScript -->
+          <textarea class="form-control coding-area col-3" readonly rows="10" placeholder="Your test results">Test 1:Passed
+          </textarea>
+          
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="btn-group">
+      <!-- Add an onclick event to the button to handle showing the test results -->
+      <button class="btn btn-success" onclick="runCode()">Run Tests</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function runCode() {
+      // Add your run code logic here
+      alert('Running code...');
+
+      // Show the test results textarea
+      document.getElementById('testResults').style.display = 'block';
+    }
+  </script>
+    <script>
+    function runCode() {
+      // Add your run code logic here
+      // Simulating test results for demonstration
+      var testsPassed = true; // Change this based on actual test results
+
+      // Get the test results textarea element
+      var testResultsTextarea = document.getElementById('testResults');
+
+      // Display test results based on pass or fail
+      if (testsPassed) {
+        testResultsTextarea.value = "Tests Passed!";
+        testResultsTextarea.classList.add('test-passed');
+      } else {
+        testResultsTextarea.value = "Tests Failed!";
+        testResultsTextarea.classList.add('test-failed');
+      }
+
+      // Show the test results textarea
+      testResultsTextarea.style.display = 'block';
+    }
+  </script>
+</body>
+
+</html>

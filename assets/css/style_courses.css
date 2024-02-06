@@ -1,0 +1,26 @@
+.courseCard {
+  text-decoration: none;
+}
+
+.courseCard:link, .courseCard:visited {
+  color: #333;
+}
+
+.courseCard:hover .card {
+  background-color: #a22eb10f;
+}
+
+.practiceButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Customize button on hover if needed */
+.practiceButton:hover {
+  background-color: #0056b3;
+}

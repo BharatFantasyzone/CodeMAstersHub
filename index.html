@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Transparent Login Form HTML CSS</title>
+    <link rel="stylesheet" href="assets\css\style_register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="bg-img">
+      <div class="content">
+        <header>Register User</header>
+        <form action="courses.html" method="post">
+          <div class="field">
+            <span class="fa fa-user"></span>
+            <input type="text" required placeholder="Username" />
+          </div>
+          <br />
+          <div class="field">
+            <span class="fa fa-envelope"></span>
+            <input type="text" required placeholder="Mail Id" />
+          </div>
+          <br />
+          <div class="field">
+            <span class="fa fa-phone"></span>
+            <input type="text" placeholder="Mobile number" />
+          </div>
+          <br />
+          <div>
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+          </div>
+          <br />
+          <div class="field">
+            <input type="submit" value="Register" />
+          </div>
+        </form>
+        <br>
+        <div class="login">
+          Already a user?
+          <a href="#">Login Now</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const pass_field = document.querySelector(".pass-key");
+      const showBtn = document.querySelector(".show");
+      showBtn.addEventListener("click", function () {
+        if (pass_field.type === "password") {
+          pass_field.type = "text";
+          showBtn.textContent = "HIDE";
+          showBtn.style.color = "#3498db";
+        } else {
+          pass_field.type = "password";
+          showBtn.textContent = "SHOW";
+          showBtn.style.color = "#222";
+        }
+      });
+</script>
+  </body>
+</html>
